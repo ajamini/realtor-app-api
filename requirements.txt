@@ -1,6 +1,9 @@
 flask
 flask_cors
+pdfrw
 PyPDF2
+fillpdf
 digital-ocean-spaces
 pandadoc-python-client
 docusign-esign
+
