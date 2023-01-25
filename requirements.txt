@@ -1,5 +1,6 @@
 flask
 flask_cors
+fpdf
 pdfrw
 PyPDF2
 fillpdf
