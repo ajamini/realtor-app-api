@@ -8,4 +8,5 @@ fillpdf
 digital-ocean-spaces
 pandadoc-python-client
 docusign-esign
+wand
 
