@@ -1,4 +1,5 @@
 flask
+flask_cors
 PyPDF2
 digital-ocean-spaces
 pandadoc-python-client
