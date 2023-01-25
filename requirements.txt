@@ -5,3 +5,70 @@ fillpdf
 digital-ocean-spaces
 pandadoc-python-client
 docusign-esign
+
+
+
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+envs:
+- key: jwt_secret
+  scope: RUN_AND_BUILD_TIME
+  value: hfjrti756r75e56ei6eidhndndgrsdrsts6465euechfc65435ste6432415412y66ukeu5ne5e5u79ppjl
+- key: database_host
+  scope: RUN_AND_BUILD_TIME
+  value: app-b3462b97-227b-4eeb-9bbd-aaba7213bc35-do-user-6916594-0.b.db.ondigitalocean.com
+- key: database_port
+  scope: RUN_AND_BUILD_TIME
+  value: "25060"
+- key: database_name
+  scope: RUN_AND_BUILD_TIME
+  value: realtor-app
+- key: database_username
+  scope: RUN_AND_BUILD_TIME
+  value: doadmin
+- key: database_password
+  scope: RUN_AND_BUILD_TIME
+  value: AVNS_oeFcD_gvi-L4eLavtTW
+- key: database_ssl_cert
+  scope: RUN_AND_BUILD_TIME
+  value: ca-certificate.crt
+- key: NODE_OPTIONS
+  scope: RUN_AND_BUILD_TIME
+  value: --max-old-space-size=1024
+name: whale-app
+region: tor
+services:
+- build_command: npm run build
+  environment_slug: node-js
+  github:
+    branch: domain-driven-development
+    deploy_on_push: true
+    repo: ajamini/realtor-nestjs-api
+  health_check:
+    http_path: /
+  http_port: 3000
+  instance_count: 1
+  instance_size_slug: basic-s
+  name: realtor-nestjs-api
+  routes:
+  - path: /
+  run_command: npm start
+  source_dir: /
+
+- build_command: python -m pip -r requirements
+  environment_slug: python-3.10.4
+  github:
+    branch: domain-driven-development
+    deploy_on_push: true
+    repo: ajamini/realtor-app-python
+  health_check:
+    http_path: /
+  http_port: 5000
+  instance_count: 1
+  instance_size_slug: basic-s
+  name: python-api
+  routes:
+  - path: /doc
+  run_command: python -m flask run
+  source_dir: src

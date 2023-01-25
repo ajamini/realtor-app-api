@@ -147,6 +147,11 @@ class Tranformers:
         return obj.strftime('%m/%d/%Y')
 
 
+
+@app.route("/")
+def home():
+    return "OK"
+
 @app.route("/send", methods=['POST'])
 def send():
     body = request.get_json()
