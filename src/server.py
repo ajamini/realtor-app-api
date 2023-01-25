@@ -285,7 +285,7 @@ def signatureDocu():
 
     return {"url": True}
 
-@app.route("generate/<form_number>", methods=['POST'])
+@app.route("/doc/generate/<form_number>", methods=['POST'])
 def generate(form_number):
     body = request.get_json()
     current_time = int(time.time()*1000)
