@@ -7,7 +7,7 @@ PyPDF2
 fillpdf
 digital-ocean-spaces
 pandadoc-python-client
-docusign-esign'
+docusign-esign
 reportlab
 wand
 
