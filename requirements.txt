@@ -10,4 +10,5 @@ pandadoc-python-client
 docusign-esign
 reportlab
 wand
+python-dotenv
 
