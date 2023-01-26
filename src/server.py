@@ -33,8 +33,8 @@ def generate():
 
     current_time = int(time.time()*1000)
     template = f"form/{form_number}.pdf"
-    filename = f"{form_number}_{current_time}.pdf"
-    temp_path = f"temp/{filename}"
+    filename = f"{form_number}_{current_time}"
+    temp_path = f"temp/{filename}.pdf"
     upload_path = f"secure/docs/{form_uuid}"
 
     pdf.pdf(template, temp_path, form_fields)
