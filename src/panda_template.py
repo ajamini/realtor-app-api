@@ -22,7 +22,7 @@ from pandadoc_client.model.pricing_table_request_sections import (
 
 
 # place your api key here
-API_KEY = 'b85951a80284ccd36cc3a657147e7af9d6a6fb6f'
+API_KEY = ''
 #
 # you should have a several onboarding CLIs in your workspace
 # just place an ID of any
