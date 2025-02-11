@@ -9,7 +9,7 @@ from pandadoc_client.model.document_create_request import DocumentCreateRequest
 
 
 # place your api key here
-API_KEY = 'b85951a80284ccd36cc3a657147e7af9d6a6fb6f'
+API_KEY = ''
 MAX_CHECK_RETRIES = 5
 
 
